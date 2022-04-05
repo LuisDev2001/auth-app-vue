@@ -63,4 +63,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "~@/scss/components/_authForm.scss";
+</style>
