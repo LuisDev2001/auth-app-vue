@@ -1,0 +1,103 @@
+.wrapper-form {
+  img {
+    display: block;
+    margin: 0 0 1.3rem 0;
+  }
+  h2,
+  p {
+    color: var(--black-2);
+  }
+  h2 {
+    font-family: "NotoSans-SemiBold";
+    font-size: 1.125rem;
+    margin: 0 0 0.9rem 0;
+  }
+  p {
+    font-family: "NotoSans-Regular";
+    font-size: 1rem;
+  }
+  &__other--options-login {
+    margin: 1.375rem 0 1.68rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 1.25rem;
+    button {
+      width: 42px;
+      height: 42px;
+      border-radius: 100%;
+      border: 1px solid var(--gray-1);
+      background: transparent;
+      overflow: hidden;
+      .mdi svg {
+        color: var(--gray-1);
+      }
+    }
+  }
+  &__already-have-account {
+    text-align: center;
+    display: block;
+    color: #828282;
+    font-size: 0.875rem;
+    a {
+      text-decoration: none;
+      color: var(--blue-primary);
+    }
+  }
+}
+
+.form {
+  margin: 2.125rem 0 0 0;
+  &-input {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color-gray);
+    margin: 0 0 0.9rem 0;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 0.875rem;
+    overflow: hidden;
+    &:nth-child(2) {
+      margin: 0;
+    }
+    input[type="email"],
+    input[type="password"] {
+      height: 100%;
+      width: calc(100% - 24px);
+      margin: 0 0 0 0.6rem;
+      border: 0;
+      padding: 0;
+      font-family: "NotoSans-Regular";
+      font-size: 1rem;
+      &::placeholder {
+        color: var(--gray-1);
+        font-size: 1rem;
+      }
+    }
+    .mdi {
+      svg {
+        color: var(--gray-1);
+      }
+    }
+  }
+  &-button {
+    margin: 1.375rem 0 1.94rem 0;
+    button {
+      display: block;
+      width: 100%;
+      height: 38px;
+      background: var(--blue-primary);
+      border: 1px solid var(--blue-primary);
+      border-radius: 8px;
+      color: white;
+      font-family: "NotoSans-SemiBold";
+      font-size: 1rem;
+    }
+  }
+  p {
+    text-align: center;
+    color: var(--gray-1);
+    font-size: 0.875rem;
+  }
+}

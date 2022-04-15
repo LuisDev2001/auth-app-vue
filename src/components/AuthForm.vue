@@ -14,25 +14,27 @@
 
     <form class="form">
       <div class="form-input">
+        <mdicon name="email" size="24" />
         <input type="email" placeholder="Email" />
       </div>
       <div class="form-input">
-        <input type="email" placeholder="Password" />
+        <mdicon name="lock" size="24" />
+        <input type="password" placeholder="Password" />
       </div>
-      <div class="form-input">
+      <div class="form-button">
         <button>{{ textButton }}</button>
       </div>
 
       <p>or continue with these social profile</p>
       <div class="wrapper-form__other--options-login">
-        <button>Google</button>
-        <button>Facebook</button>
-        <button>Twitter</button>
-        <button>GitHub</button>
+        <button><mdicon name="google" size="24" /></button>
+        <button><mdicon name="facebook" size="24" /></button>
+        <button><mdicon name="twitter" size="24" /></button>
+        <button><mdicon name="github" size="24" /></button>
       </div>
     </form>
 
-    <span>
+    <span class="wrapper-form__already-have-account">
       {{ bottomTextForm }}
       <router-link :to="`/${linkToGoText}`">Login</router-link>
     </span>
