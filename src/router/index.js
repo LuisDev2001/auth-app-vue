@@ -31,10 +31,10 @@ const routes = [
       requiresAuth: true,
     },
   },
-  // {
-  //   path: "*",
-  //   redirect: "/register",
-  // },
+  {
+    path: "*",
+    redirect: "/register",
+  },
 ];
 
 const router = new VueRouter({
