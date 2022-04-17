@@ -36,7 +36,9 @@
 
     <span class="wrapper-form__already-have-account">
       {{ bottomTextForm }}
-      <router-link :to="`/${linkToGoText}`">Login</router-link>
+      <router-link :to="`/${linkToGoText}`">
+        {{ textGoToCapitalize }}
+      </router-link>
     </span>
   </div>
 </template>
@@ -60,6 +62,13 @@ export default {
     isRegisterForm: {
       type: Boolean,
       default: true,
+    },
+  },
+  computed: {
+    textGoToCapitalize() {
+      const firstLetter = this.linkToGoText.charAt(0).toUpperCase();
+      const restText = this.linkToGoText.slice(1, this.linkToGoText.length);
+      return `${firstLetter}${restText}`;
     },
   },
 };

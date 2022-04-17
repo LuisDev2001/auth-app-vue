@@ -4,7 +4,7 @@
       text-button="Start coding now"
       bottomTextForm="Adready a member?"
       linkToGoText="login"
-      :isRegisterForm="true"
+      :is-register-form="true"
     />
   </div>
 </template>

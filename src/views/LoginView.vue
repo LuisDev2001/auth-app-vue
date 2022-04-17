@@ -4,7 +4,7 @@
       text-button="Login"
       bottomTextForm="Don’t have an account yet?"
       linkToGoText="register"
-      :isRegisterForm="false"
+      :is-register-form="false"
     />
   </div>
 </template>
