@@ -1,0 +1,106 @@
+.header-profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__options--info-name,
+  &__more-options,
+  &__widget--list {
+    display: none;
+  }
+  &__options {
+    display: flex;
+    align-items: center;
+    &--info {
+      display: inherit;
+      align-items: inherit;
+      img {
+        width: 32px;
+        height: 36px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &__options--info-name,
+    &__more-options,
+    &__widget--list {
+      display: block;
+    }
+    &__options {
+      position: relative;
+      &--info {
+        img {
+          margin: 0 11px 0 0;
+        }
+        &-name {
+          font-family: "NotoSans-Bold";
+          font-size: 0.75rem;
+          margin: 0 1.25rem 0 0;
+          display: inline-block;
+          color: var(--black-2);
+        }
+      }
+    }
+    &__more-options {
+      cursor: pointer;
+      .mdi svg {
+        color: var(--black-2);
+      }
+    }
+    &__widget--list {
+      position: absolute;
+      bottom: calc(-174px + -30px);
+      left: -40px;
+      width: 188px;
+      height: 174px;
+      border-radius: 0.75rem;
+      border: 1px solid #e0e0e0;
+      padding: 0.8rem 0.5rem;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.051);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.4s ease all;
+      &.is-active {
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+    &__widget--item {
+      height: 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 11px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: "NotoSans-Medium";
+      font-size: 0.75rem;
+      color: var(--gray-2);
+      &:hover {
+        background: #f2f2f2;
+      }
+      .mdi {
+        margin: 0 11px 0 0;
+        svg {
+          color: var(--gray-2);
+        }
+      }
+      &.logout {
+        color: #eb5757;
+        .mdi {
+          svg {
+            color: #eb5757;
+          }
+        }
+      }
+    }
+    &__widget--divider {
+      height: 1px;
+      background-color: #e0e0e0;
+      border: none;
+      margin: 0.75rem 0;
+    }
+  }
+}
